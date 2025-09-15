@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -114,6 +114,7 @@
             border-radius: 15px;
             margin: 20px 0;
             border-left: 5px solid #ffd700;
+            font-size: 20px;
         }
 
         .argument-points {
@@ -177,6 +178,33 @@
             transform: scale(1.1);
         }
 
+        .reference-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .reference-list li {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border-left: 3px solid #ffd700;
+        }
+
+        .reflection-question {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .reflection-question h4 {
+            color: #ffd700;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
         @keyframes fadeInDown {
             from {
                 opacity: 0;
@@ -199,19 +227,19 @@
             }
         }
 
-.typing-effect {
-    overflow: hidden;
-    border-right: 3px solid #ffd700;
-    white-space: nowrap;
-    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite 3s;
-    animation-fill-mode: forwards;
-}
+        .typing-effect {
+            overflow: hidden;
+            border-right: 3px solid #ffd700;
+            white-space: nowrap;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite 3s;
+            animation-fill-mode: forwards;
+        }
 
-.typing-effect.finished {
-    border-right: none;
-    overflow: visible;
-    white-space: normal;
-}
+        .typing-effect.finished {
+            border-right: none;
+            overflow: visible;
+            white-space: normal;
+        }
 
         @keyframes typing {
             from { width: 0 }
@@ -254,151 +282,116 @@
         </div>
 
         <div class="navigation">
-            <button class="nav-btn active" onclick="showSection('pendahuluan')">Pendahuluan</button>
-            <button class="nav-btn" onclick="showSection('struktur')">Struktur</button>
-            <button class="nav-btn" onclick="showSection('teknik')">Teknik</button>
-            <button class="nav-btn" onclick="showSection('contoh')">Contoh</button>
+            <button class="nav-btn" onclick="showSection('struktur')">Pendahuluan</button>
+            <button class="nav-btn" onclick="showSection('contoh')">Teks Kampanye</button>
             <button class="nav-btn" onclick="showSection('kesimpulan')">Kesimpulan</button>
-        </div>
-
-        <div id="pendahuluan" class="content-section active">
-            <h2>Pendahuluan</h2>
-            <!-- <p>Teks argumentasi adalah jenis teks yang bertujuan untuk meyakinkan pembaca tentang suatu pendapat atau gagasan melalui alasan-alasan yang logis dan bukti-bukti yang kuat.</p>
-             -->
-            <div class="highlight">
-                <h3>Latar Belakang</h3>
-                <p>Pada zaman serba digital dengan informasi yang semakin mudah untuk didapatkan, tentunya akan ada pihak tidak betanggung jawab yang menyebarkan informasi yang tidak benar yang biasa disebut dengan hoaks. Oleh karena itu, kita perlu meningkatkan literasi digital. Literasi digital sendiri merupakan pengetahuan serta kecakapan pengguna dalam memanfaatkan media digital seperti alat komunikasi, jaringan internet, dan berbagai hal digital lainnya.</p>
-            </div>
-
-            <div class="argument-points">
-                <div class="point-card">
-                    <h4>Tujuan</h4>
-                    <p>Lorem Ipsum</p>
-                </div>
-                <div class="point-card">
-                    <h4>Tema</h4>
-                    <p>Sebagai media komunikasi untuk menyampaikan gagasan dan mempengaruhi opini publik.</p>
-                </div>
-            </div>
+            <button class="nav-btn" onclick="showSection('daftar-pustaka')">Daftar Pustaka</button>
+            <button class="nav-btn" onclick="showSection('refleksi')">Refleksi Diri</button>
         </div>
 
         <div id="struktur" class="content-section">
-            <h2>Struktur Teks Argumentasi</h2>
+            <h2>Pendahuluan</h2>
             
-            <h3>1. Pendahuluan (Tesis)</h3>
-            <p>Bagian yang berisi pernyataan pendapat atau posisi penulis terhadap suatu isu. Tesis harus jelas, tegas, dan dapat diperdebatkan.</p>
+            <h3>Latar Belakang</h3>
+            <p>Pada zaman serba digital dengan informasi yang semakin mudah untuk didapatkan, tentunya akan ada pihak tidak betanggung jawab yang menyebarkan informasi yang tidak benar yang biasa disebut dengan hoaks. Oleh karena itu, kita perlu meningkatkan literasi digital.
 
-            <h3>2. Tubuh Argumen</h3>
-            <p>Berisi rangkaian argumen yang mendukung tesis. Setiap argumen harus disertai dengan:</p>
-            
-            <div class="argument-points">
-                <div class="point-card">
-                    <h4>Data dan Fakta</h4>
-                    <p>Informasi objektif yang mendukung argumen, seperti statistik, hasil penelitian, atau kutipan ahli.</p>
-                </div>
-                <div class="point-card">
-                    <h4>Alasan Logis</h4>
-                    <p>Penjelasan yang menghubungkan data dengan tesis secara masuk akal.</p>
-                </div>
-                <div class="point-card">
-                    <h4>Contoh Konkret</h4>
-                    <p>Ilustrasi nyata yang memperjelas dan memperkuat argumen.</p>
-                </div>
-            </div>
+Literasi digital sendiri merupakan pengetahuan serta kecakapan pengguna dalam memanfaatkan media digital seperti alat komunikasi, jaringan internet, dan berbagai hal digital lainnya.</p>
 
-            <h3>3. Penutup (Penegasan Ulang)</h3>
-            <p>Berisi penegasan kembali tesis dan rangkuman argumen utama untuk memperkuat posisi penulis.</p>
-        </div>
-
-        <div id="teknik" class="content-section">
-            <h2>Teknik Penulisan Efektif</h2>
-            
-            <div class="highlight">
-                <h3>Prinsip AIDA dalam Argumentasi:</h3>
-                <p><strong>Attention</strong> → <strong>Interest</strong> → <strong>Desire</strong> → <strong>Action</strong></p>
-            </div>
-
-            <h3>Teknik-teknik Penting:</h3>
+            <h3>2. Tujuan</h3>
             
             <div class="argument-points">
                 <div class="point-card">
-                    <h4>Gunakan Data Kredibel</h4>
-                    <p>Sertakan statistik, penelitian ilmiah, dan sumber terpercaya untuk memperkuat kredibilitas argumen.</p>
+                    <p>Menyadarkan masyarakat mengenai bahaya hoaks</p>
                 </div>
                 <div class="point-card">
-                    <h4>Bantah Argumen Lawan</h4>
-                    <p>Antisipasi dan tanggapi argumen yang bertentangan untuk menunjukkan kekuatan posisi Anda.</p>
+                    <p>Mengajarkan masyarakat mengenai Literasi Digital</p>
                 </div>
                 <div class="point-card">
-                    <h4>Gunakan Bahasa Persuasif</h4>
-                    <p>Pilih kata-kata yang kuat dan emotif tanpa kehilangan objektivitas.</p>
+                    <p>Mencerdaskan masyarakat dalam menggunakan media digital</p>
+                </div>
+            </div>
+
+            <h3>3. Target Audience</h3>
+            
+            <div class="argument-points">
+                <div class="point-card">
+                    <p>Masyarakat yang masih awam dengan media digital</p>
                 </div>
                 <div class="point-card">
-                    <h4>Struktur Logis</h4>
-                    <p>Susun argumen dari yang lemah ke kuat, atau sebaliknya, tergantung strategi yang dipilih.</p>
+                    <p>Segala jenis usia</p>
                 </div>
             </div>
         </div>
 
         <div id="contoh" class="content-section">
-            <h2>Contoh Penerapan</h2>
+            <h2>Teks Kampanye</h2>
             
             <div class="highlight">
-                <h3>Topik: "Pentingnya Pendidikan Digital di Era Modern"</h3>
+                <h3>Topik: "Literasi Digital dan Anti Hoaks"</h3>
             </div>
 
-            <h3>Tesis:</h3>
-            <p>Pendidikan digital harus segera diintegrasikan ke dalam kurikulum nasional untuk mempersiapkan generasi yang kompeten menghadapi tantangan abad ke-21.</p>
+            <h3>Penyataan Pendapat</h3>
+            <p>Hoaks adalah ancaman serius di era digital karena dapat menyesatkan masyarakat. Oleh sebab itu, literasi digital sangat penting agar kita mampu memilah dan memahami informasi dengan bijak.</p>
 
             <h3>Argumen Pendukung:</h3>
             <div class="argument-points">
                 <div class="point-card">
-                    <h4>Argumen 1: Kebutuhan Pasar Kerja</h4>
-                    <p>85% pekerjaan di tahun 2030 akan membutuhkan keterampilan digital. Tanpa persiapan sejak dini, generasi muda akan tertinggal dalam kompetisi global.</p>
+                    <h4>Argumen 1</h4>
+                    <p>Hoaks dapat menimbulkan keresahan sosial. Banyak berita bohong yang sengaja dibuat untuk memecah belah persatuan, menimbulkan kebencian, atau bahkan kepanikan di tengah masyarakat.</p>
                 </div>
                 <div class="point-card">
-                    <h4>Argumen 2: Efektivitas Pembelajaran</h4>
-                    <p>Penelitian menunjukkan siswa yang terpapar teknologi sejak dini memiliki kemampuan problem-solving 40% lebih baik.</p>
+                    <h4>Argumen 2</h4>
+                    <p>Literasi digital membantu masyarakat mengenali sumber informasi yang benar. Dengan pengetahuan yang cukup, kita bisa melakukan cek fakta, membandingkan sumber, dan tidak mudah percaya begitu saja pada informasi yang beredar.</p>
                 </div>
                 <div class="point-card">
-                    <h4>Argumen 3: Persiapan Masa Depan</h4>
-                    <p>Negara-negara maju seperti Finlandia dan Singapura telah menerapkan kurikulum digital dengan hasil yang sangat positif.</p>
+                    <h4>Argumen 3</h4>
+                    <p>Mmasyarakat yang cerdas digital tidak mudah terprovokasi. Mereka mampu menyaring informasi, hanya menyebarkan hal yang bermanfaat, serta ikut menjaga lingkungan digital agar tetap sehat dan aman.</p>
                 </div>
             </div>
 
             <h3>Penegasan Ulang:</h3>
-            <p>Dengan mempertimbangkan kebutuhan pasar kerja, efektivitas pembelajaran, dan pengalaman negara lain, implementasi pendidikan digital bukan lagi pilihan, melainkan keharusan untuk kemajuan bangsa.</p>
+            <p>Dengan meningkatkan literasi digital, kita dapat melindungi diri dari hoaks sekaligus ikut menjaga lingkungan digital yang sehat, aman, dan bermanfaat bagi semua.</p>
         </div>
 
         <div id="kesimpulan" class="content-section">
             <h2>Kesimpulan</h2>
             
             <div class="highlight">
-                <h3>Kunci Sukses Teks Argumentasi:</h3>
+                <h4>Melawan hoaks dapat dilakukan dengan memperkuat literasi digital. Semakin cerdas masyarakat dalam menggunakan teknologi, semakin kecil peluang hoaks menyebar luas. Mari bersama-sama menjadi pengguna digital yang bijak, kritis, dan bertanggung jawab.</h4>
+            </div>
+        </div>
+
+        <div id="daftar-pustaka" class="content-section">
+            <h2>Daftar Pustaka</h2>
+            
+            <ul class="reference-list">
+                <li>RSUD Grobogan. Anti-Hoax. Retrieved from https://ppid.rsud.grobogan.go.id/anti-hoax/</li>
+<li>Kompas.com. (2021, Juni 15). Literasi Digital: Pengertian, Prinsip, Manfaat, Tantangan dan Contoh. Retrieved from https://www.kompas.com/skola/read/2021/06/15/142539669/literasi-digital-pengertian-prinsip-manfaat-tantangan-dan-contoh</li>
+<li>Tsaniyah, N., & Juliana, K. A. (2019). Literasi Digital Sebagai Upaya Menangkal Hoaks di Era Disrupsi. Al-Balagh: Jurnal Dakwah dan Komunikasi.</li>
+<li>Noer, U. (2022). Literasi Digital dan Mobile Learning. IAIN Parepare.</li>
+<li>Fitriarti, E. A. Urgensi Literasi Digital dalam Menangkal Hoax. Jurnal MC, Universitas Lambung Mangkurat.</li>
+<li>Februari, A., dkk. (2024). Peran Literasi di Era Digital dalam Menghadapi Hoaks. International Journal of Education.</li>
+<li>Tim Pengabdian. (2021). Penyuluhan Literasi Digital Anti Hoax, Bullying, dan Ujaran Kebencian pada Remaja di Kota Ternate. ABSYARA: Jurnal Pengabdian Pada Masyarakat, 3(2).</li>
+<li>Meyarsa. (2023). Penanganan Hoaks Keagamaan di Sosial Media Melalui Literasi Digital Milenial. Meyarsa: Jurnal Ilmu Komunikasi dan Dakwah.</li>
+            </ul>
+        </div>
+
+        <div id="refleksi" class="content-section">
+            <h2>Refleksi Diri</h2>
+            
+            <div class="reflection-question">
+                <h4>1. Apa yang kamu pelajari dari tugas ini?</h4>
+                <p>Mempelajari bagaimana cara membuat teks argumentasi dan mempelajari tenttang Literasi Digital dan Anti Hoaks.</p>
+                </div>
+
+            <div class="reflection-question">
+                <h4>2. Apa tantangan terbesar dalam membuat kampanye digital?</h4>
+               <p>Mencari sumber yang tepat untuk dijadikan referensi.</p>
             </div>
 
-            <div class="argument-points">
-                <div class="point-card">
-                    <h4>Tesis yang Kuat</h4>
-                    <p>Mulai dengan pernyataan yang jelas, spesifik, dan dapat diperdebatkan.</p>
-                </div>
-                <div class="point-card">
-                    <h4>Bukti yang Valid</h4>
-                    <p>Dukung setiap argumen dengan data, fakta, dan contoh yang relevan.</p>
-                </div>
-                <div class="point-card">
-                    <h4>Logika yang Konsisten</h4>
-                    <p>Pastikan alur berpikir mudah diikuti dan tidak ada kontradiksi.</p>
-                </div>
-                <div class="point-card">
-                    <h4>Bahasa yang Efektif</h4>
-                    <p>Gunakan kata-kata yang tepat, jelas, dan persuasif.</p>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 40px;">
-                <p style="font-size: 1.3rem; font-weight: bold;">Terima kasih atas perhatian Anda!</p>
-                <p style="opacity: 0.8; margin-top: 10px;">Semoga presentasi ini bermanfaat untuk pemahaman Anda tentang teks argumentasi.</p>
+            <div class="reflection-question">
+                <h4>3. Bagaimana kamu menilai kemampuan kolaborasi tim (jika berkelompok)?</h4>
+              <p>Tugas ini adalah tugas individu</p>
             </div>
         </div>
     </div>
@@ -410,7 +403,7 @@
     </div>
 
     <script>
-        const sections = ['pendahuluan', 'struktur', 'teknik', 'contoh', 'kesimpulan'];
+        const sections = ['struktur', 'contoh', 'kesimpulan', 'daftar-pustaka', 'refleksi'];
         let currentSection = 0;
 
         function showSection(sectionId) {
@@ -530,19 +523,11 @@
             });
         });
 
-        // Auto-advance option (uncomment to enable)
-        // setInterval(() => {
-        //     nextSection();
-        //     if (currentSection === sections.length - 1) {
-        //         currentSection = -1; // Reset to beginning
-        //     }
-        // }, 10000); // Change slide every 10 seconds
-
         // Remove typing effect after animation completes
-setTimeout(() => {
-    const typingElement = document.querySelector('.typing-effect');
-    typingElement.classList.add('finished');
-}, 4000); // 3s typing + 1s blink
+        setTimeout(() => {
+            const typingElement = document.querySelector('.typing-effect');
+            typingElement.classList.add('finished');
+        }, 4000); // 3s typing + 1s blink
     </script>
 </body>
 </html>
